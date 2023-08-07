@@ -15,7 +15,7 @@ function printAlternative(alternatives, isMultiple=false){
     html += `
       <div class="field card-alternative">
         <div class="ui ${isMultiple ? '': 'radio'} checkbox">
-          <input type="${isMultiple ? 'checkbox': 'radio'}" alternative-id="${alternative.id}">
+          <input type="${isMultiple ? 'checkbox': 'radio'}" alternative-id="${alternative.id}" ${isMultiple ? '' : 'name="preguntaUnica"'}>
           <label>${alternative.name}</label>
         </div>
       </div>
