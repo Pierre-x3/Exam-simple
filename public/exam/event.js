@@ -55,7 +55,7 @@ export const sendButton = () => {
       let answerOrigin = Object.values(originAnswers)[i];
 
       let isCorrect = answerExam.every(res => answerOrigin.includes(res));
-      if(isCorrect) corrects++;
+      if(isCorrect && answerExam.length > 0) corrects++;
     }
 
     alert(`Total: ${corrects}/${total}`);
